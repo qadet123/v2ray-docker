@@ -3,6 +3,8 @@ similar with and thanks to: https://github.com/hangim/kcp-shadowsocks-docker
 v2ray ver: 4.20.0  
 kcptun ver: 20190924
 
+[Dockerfile and config files](https://github.com/qadet123/v2ray-kcptun-docker)
+
 # Usage:
 
 **Remove all the comments**
@@ -25,4 +27,11 @@ docker run --restart=always -d \
 bbbx123/fq:1.1
 ```
 
-you can find each arg's meaning in [kcptun docs](https://github.com/xtaci/kcptun/blob/master/README.md#usage) and [v2ray-vmess-docs](https://www.v2ray.com/chapter_02/protocols/vmess.html),[v2ray-shadowsocks-docs](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html),[v2ray-mkcp-docs](https://www.v2ray.com/chapter_02/transport/mkcp.html)
+# Useful links
+[kcptun docs](https://github.com/xtaci/kcptun/blob/master/README.md#usage) 
+
+[v2ray-vmess-docs](https://www.v2ray.com/chapter_02/protocols/vmess.html)
+
+[v2ray-shadowsocks-docs](https://www.v2ray.com/chapter_02/protocols/shadowsocks.html)
+
+[v2ray-mkcp-docs](https://www.v2ray.com/chapter_02/transport/mkcp.html)
