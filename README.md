@@ -1,13 +1,11 @@
-similar with and thanks to: https://github.com/hangim/kcp-shadowsocks-docker
+参考自: https://github.com/hangim/kcp-shadowsocks-docker
 
-v2ray ver: 4.20.0  
-kcptun ver: 20190924
-
-[Dockerfile and config files](https://github.com/qadet123/v2ray-kcptun-docker)
+v2ray 版本: 4.20.0  
+kcptun 版本: 20190924
 
 # Usage:
 
-**Remove all the comments**
+**删除所有注释**
 
 ```bash
 docker run --restart=always -d \
