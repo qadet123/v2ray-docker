@@ -22,7 +22,7 @@ docker run --restart=always -d \
 -p <port>:10002/udp \# kcptun encapsulated shadowsocks
 -p <port>:10003 \# vmess
 -p <port>:10004/udp \# mkcp encapsulated  vmess
-bbbx123/fq:1.1
+bbbx123/fq:1.2
 ```
 
 # Useful links
