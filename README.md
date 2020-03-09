@@ -1,28 +1,35 @@
-参考自: https://github.com/hangim/kcp-shadowsocks-docker
-
-v2ray 版本: 4.20.0  
-kcptun 版本: 20190924
-
 # Usage:
 
-**删除所有注释**
+配置全部通过变量传入,默认值:
 
+```
+SS_METHOD=aes-128-cfb
+SS_PASSWORD=123123
+VMESS_ID=e65663e8-4211-4a91-8e69-5dcddb6dabb2
+VMESS_ALTER_ID=0
+VMESS_WS_HOST=www.mydomain.com
+VMESS_WS_PATH=/
+```
+
+相关端口：
+
+```
+10001: ss
+10002: vmess
+10003/udp: vmess with mkcp
+10004: vmess with websocket & tls
+```
+
+修改需要的变量
 ```bash
 docker run --restart=always -d \
--e SS_METHOD=<aes-256-cfb|aes-128-cfb|chacha20|chacha20-ietf|aes-256-gcm|aes-128-gcm|chacha20-poly1305|chacha20-ietf-poly1305>  \# default "aes-128-cfb"
--e SS_PASSWORD=<string> \# default "123123"
--e SS_KCP_KEY=<string>\# default "123123"
--e SS_KCP_CRYPT=<aes|aes-128|aes-192|salsa20|blowfish|twofish|cast5|3des|tea|xtea|xor|sm4|none> \#default "aes-128" 
--e SS_KCP_MODE=<fast3|fast2|fast|normal> \# default "fast2"
--e VMESS_ID=<uuid> \# default "e65663e8-4211-4a91-8e69-5dcddb6dabb2" 
--e VMESS_ALTER_ID=<0-65535> \#default 0
--e VMESS_MKCP_ID=<uuid> \#default "e65663e8-4211-4a91-8e69-5dcddb6dabb2"
--e VMESS_MKCP_ALTER_ID=<0-65535>  \#default 0
--p <port>:10001 \# shadowsocks
--p <port>:10002/udp \# kcptun encapsulated shadowsocks
--p <port>:10003 \# vmess
--p <port>:10004/udp \# mkcp encapsulated  vmess
-bbbx123/fq:1.2
+-e SS_METHOD=chacha20
+-e VMESS_MKCP_ALTER_ID=<0-65535>
+-p <port>:10001
+-p <port>:10002
+-p <port>:10003/udp
+-p <port>:10004
+bbbx123/fq:1.3
 ```
 
 # Useful links
