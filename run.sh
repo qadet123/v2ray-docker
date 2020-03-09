@@ -86,4 +86,4 @@ EOF
 
 sleep 3
 
-# exec /usr/local/fq/v2ray -config /usr/local/fq/v2ray.conf
+exec /usr/local/fq/v2ray -config /usr/local/fq/v2ray.conf
