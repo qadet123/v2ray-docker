@@ -1,17 +1,6 @@
 # Usage:
 
-配置全部通过变量传入,默认值:
-
-```
-SS_METHOD=aes-128-cfb
-SS_PASSWORD=123123
-VMESS_ID=e65663e8-4211-4a91-8e69-5dcddb6dabb2
-VMESS_ALTER_ID=0
-VMESS_WS_HOST=www.mydomain.com
-VMESS_WS_PATH=/
-```
-
-相关端口：
+映射端口：
 
 ```
 10001: ss
@@ -20,11 +9,23 @@ VMESS_WS_PATH=/
 10004: vmess with websocket & tls
 ```
 
-修改需要的变量
+配置变量默认值
+
+```
+SS_METHOD=aes-128-cfb
+SS_PASSWORD=123123
+VMESS_UUID=e65663e8-4211-4a91-8e69-5dcddb6dabb2
+VMESS_ALTERID=0
+VMESS_WS_HOST=www.mydomain.com
+VMESS_WS_PATH=/
+```
+
+需要修改配置直接传入对应的变量即可
 ```bash
 docker run --restart=always -d \
 -e SS_METHOD=chacha20
--e VMESS_MKCP_ALTER_ID=<0-65535>
+-e VMESS_MKCP_ALTER_ID=10
+-e VMESS_WS_PATH=/_watch
 -p <port>:10001
 -p <port>:10002
 -p <port>:10003/udp
