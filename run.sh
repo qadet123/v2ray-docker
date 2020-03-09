@@ -1,11 +1,4 @@
 #!/bin/sh
-SS_METHOD=aes-128-cfb 
-SS_PASSWORD=123123 
-VMESS_UUID=e65663e8-4211-4a91-8e69-5dcddb6dabb2 
-VMESS_ALTERID=0 
-VMESS_WS_HOST=www.mydomain.com 
-VMESS_WS_PATH=\
-
 
 openssl req -x509 -nodes -days 9999 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=${VMESS_WS_HOST}"
 
