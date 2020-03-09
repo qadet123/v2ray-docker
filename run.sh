@@ -1,8 +1,6 @@
 #!/bin/sh
-
+cd /usr/local/fq
 openssl req -x509 -nodes -days 9999 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=${VMESS_WS_HOST}"
-
-
 cat > v2ray.conf << EOF
 {
 	"inbounds": [{
